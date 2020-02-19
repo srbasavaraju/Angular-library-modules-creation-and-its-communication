@@ -1,0 +1,58 @@
+<!-- <div>
+    <p-button label="Sign Out" (click)="signOut();"></p-button>
+</div> -->
+<br />
+<div>
+    Access Token: {{accessToken}}
+</div>
+<div> Messages send from parent:
+    <ul>
+        <li *ngFor="let message of messages">
+            {{ message }}
+        </li>
+    </ul>
+</div>
+
+<div> Send messages to Parent:
+    <div>
+        <input type="text" [(ngModel)]="message" />
+        <br />
+        <br />
+        <button (click)="postMessageToParent();"> Send </button>
+    </div>
+
+</div>
+
+<div>
+    Option2: Broadcast Channel API
+</div>
+<div>
+    Messages sent through broadcast:
+</div>
+<div>
+    <ul>
+        <li *ngFor="let broadcastReceivedMessage of broadcastReceivedMessages">
+            {{ broadcastReceivedMessage }}
+        </li>
+    </ul>
+</div>
+<div>
+    <div> Send message: </div>
+    <div>
+        <input type="text" [(ngModel)]="bMessage" />
+        <br />
+        <br />
+        <button (click)="postMessageToParentThroughBroadCast();"> Send </button>
+    </div>
+</div>
+
+<div> Patient Details:
+    <br />
+    <span>Id: {{patient.Id}}</span>
+    <br />
+    <span>Name: {{patient.Name}}</span>
+    <br />
+    <span>Unit: {{patient.Unit}}</span>
+    <br />
+    <span>Institution: {{patient.Institution}}</span>
+</div>

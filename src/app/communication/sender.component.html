@@ -1,0 +1,43 @@
+<div>
+    Option1: Communication Channel:
+</div>
+<div>
+    <button (click)="launchWindow();"> Launch Window </button>
+</div>
+<br />
+<div> Send messages to child:
+    <div>
+        <input type="text" [(ngModel)]="message" />
+        <br />
+        <br />
+        <button (click)="postMessageToChild();"> Send </button>
+    </div>
+</div>
+
+<div> Messages sent from Child: </div>
+<div>
+    <ul>
+        <li *ngFor="let message of messages">
+            {{ message }}
+        </li>
+    </ul>
+</div>
+
+<div>
+    Option2: Broadcast Channel API
+    <div>
+        <input type="text" [(ngModel)]="broadcastMessage" />
+        <br />
+        <br />
+        <button (click)="broadCastMessage();"> Send </button>
+    </div>
+</div>
+<div>
+    <div>Broadcasted messages: </div>
+    <ul>
+        <li *ngFor="let broadCastedMessage of broadCastedMessages">
+            {{ broadCastedMessage }}
+        </li>
+    </ul>
+</div>
+

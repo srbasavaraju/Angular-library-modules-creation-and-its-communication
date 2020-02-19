@@ -1,0 +1,8 @@
+<div class="p-grid p-align-center p-nogutter header-height" style="background-color: lightblue;">
+    <div class="p-col-2">Logo</div>
+    <div class="p-col-2">Product name</div>
+    <div class="p-col-4">
+        <p-dropdown [options]="moduleList" [(ngModel)]="selectedModule" (onChange)="onModuleSelection($event);"></p-dropdown>
+    </div>
+    <div class="p-col-4">User Profile: {{userName}}</div>
+</div>

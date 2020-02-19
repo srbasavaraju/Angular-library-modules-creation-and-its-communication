@@ -1,0 +1,19 @@
+@header-height: 60px;
+@footer-height: 60px;
+@container-height: ~'calc(100% - (@{header-height} + @{footer-height}))';
+
+
+.app-content-section {
+    height: 600px;
+}
+
+.app-root {
+    .font-normal(20px, left, #333333);
+}
+
+.font-normal(@fontsize, @fontalign, @fontcolor) {
+    font-family: 'CentraleSans-Book', sans-serif;
+    font-size: @fontsize;
+    text-align: @fontalign;
+    color: @fontcolor;
+}
